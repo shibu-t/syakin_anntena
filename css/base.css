@@ -1,0 +1,178 @@
+@charset "utf-8";
+
+/* CSS Information ==============================
+File name: base.css
+Editors: Shinji Kobayashi
+Last Editor: Shinji Kobayashi
+Date: 2008.10.01
+Table of contents:
+ +base element
+ +link pseudo-class
+ +header
+ +container
+ +footer
+ +general class
+ +clearfix
+ +a11y
+============================================== */
+body{
+	background-color:#F5F5F5;
+	background-image: url(../bg_223647.png);
+	background-repeat: repeat;
+}
+
+#header{
+	height: auto;
+	margin: 0 auto;
+	font-size: 25px;
+}
+
+.title{
+	display: inline-block;
+	padding-left: 339px;
+        padding-right: 162px;
+}
+
+#header a{
+	margin:0;
+	text-align:center;
+	text-decoration:none;
+	color:#555;
+	line-height:2em;
+	font-size:15px;;
+	font color:#555;
+	font-weight: bold;
+}
+
+#header .address a:hover{
+background-color:#A9A9A9;
+color:#000;
+}
+
+.address{
+	display: inline-block;
+}
+
+#wrapper{
+	width: 1050px;
+	height: auto;
+	margin: 10px auto;
+	padding: 10px 20px;
+	background-color: #FFFFFF;
+	border: 24px solid #6FC3DF;
+	-moz-border-radius: 28px;
+	-webkit-border-radius: 28px;
+	border-radius: 28px;
+	/*IE 7 AND 8 DO NOT SUPPORT BORDER RADIUS*/
+	-moz-box-shadow: 0px 0px 8px #000000;
+	-webkit-box-shadow: 0px 0px 8px #000000;
+	box-shadow: 0px 0px 8px #000000;
+	/*IE 7 AND 8 DO NOT SUPPORT BLUR PROPERTY OF SHADOWS*/
+}
+
+#feed ul li ul li{
+	display:inline-block;
+}
+
+#date{
+	font color:#555;
+	height:18px;
+	width:113px;
+}
+
+#articletitle{
+	width:650px;
+	padding-left:13px;
+	overflow:hidden;
+	text-overflow: ellipsis;
+	-webkit-text-overflow: ellipsis; /* Safari */
+	-o-text-overflow: ellipsis; /* Opera */
+	white-space: nowrap;
+}
+
+#feed a{
+	margin:0;
+	text-align:center;
+	text-decoration:none;
+	color:#555;
+	line-height:2em;
+	font-size:15px;;
+	font color:#555;
+	font-weight: bold;
+}
+
+#feed a:hover{
+background-color:#A9A9A9;
+color:#000;
+}
+
+#hatena{
+	width:55px;
+}
+
+#blogname{
+	width:200px;
+	overflow:hidden;
+	text-overflow: ellipsis;
+	-webkit-text-overflow: ellipsis; /* Safari */
+	-o-text-overflow: ellipsis; /* Opera */
+	white-space: nowrap;
+}
+@media(max-width:680px){
+	.title{
+		display: inline-block;
+		padding:0;
+		width:100%;
+		text-align:center;
+		
+	}
+	.title img{
+		width:96.6% /*290px*/
+	}
+	.address{
+		display: none;
+	}
+	#wrapper{
+		width:90%;/*300px*/
+		padding: 10px 5px;
+		border: 6px solid #6FC3DF;
+	}
+	#feed ul li ul li{
+		display:block
+	}
+	#line{
+		margin-bottom:1px;
+		border:1px solid #999;
+		-moz-border-radius: 3px;
+		-webkit-border-radius: 3px;
+		border-radius: 3px;
+	}
+	#feed #date{
+		font-size: 12px;
+		padding-left: 13px;
+	}
+	#feed #hatena{
+		margin-bottom: -20px;
+		position: relative;
+		left: 227px;
+	}
+	#articletitle{
+		width:90%;/*271px*/
+		padding-left:13px;
+		overflow:visible;
+		white-space:normal
+	}
+	#articletitle a{
+		font-size:16px;
+		color:#000;
+	}
+	#blogname{
+		overflow:visible;
+		white-space:normal;
+		padding-left: 13px;
+		width: 90%;/*271px*/
+	}
+	#blogname a{
+		font-size:10px;
+	}
+}
