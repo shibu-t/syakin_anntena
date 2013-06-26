@@ -37,7 +37,8 @@ foreach ($feeds as $feed) {
     foreach ($rss->item as $item) {
         if( $i++ == 10 ) { break; }
         $dc = $item->children('http://purl.org/dc/elements/1.1/');
-        array_push($entries, $item);
+        $entries[$entryNum]['title'] = (string)$item->title;
+        $entries[$entryNum]['link'] = (string)$item->link;
         $entries[$entryNum]['blogName'] = (string)$rss->channel->title;
         $entries[$entryNum]['blogUrl'] = (string)$rss->channel->link;
         $entries[$entryNum]['date'] = (string)$dc->date;
@@ -50,12 +51,17 @@ foreach($entries as $key => $val) {
 }
 
 array_multisort($date,SORT_STRING,SORT_ASC,$entries);
-echo '<pre>';
-var_dump($entries);
-echo '</pre>';
+// echo '<pre>';
+// var_dump($entries);
+// echo '</pre>';
+
     // $link = $item->link;
     // $title = $item->title;
     // $date = date('Y.m.d.H.i.s', strtotime($dc->date));
+
+$m = new Memcached();
+$m->addServer('localhost', 11211);
+$m->set('key', $entries, 60);
 ?>
 </body>
 </html>
