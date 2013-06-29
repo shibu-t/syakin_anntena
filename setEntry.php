@@ -1,3 +1,5 @@
+#!/usr/bin/php
+
 <?php
 $entryNum = 0;
 $maxEntriesDisplay = 200;
