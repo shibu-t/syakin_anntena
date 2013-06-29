@@ -10,17 +10,17 @@
     <link rel="stylesheet" type="text/css" media="screen, projection, tv" href="css/import.css" />
     <link rel="stylesheet" type="text/css" media="print" href="css/print.css" />
     <!-- AllTheFavIcons.com standard favicon_64.png -->
-    <link rel="icon" type="image/png" href="/favicons/favicon_64.png" />
+    <link rel="icon" type="image/png" href="favicons/favicon_64.png" />
     <!-- AllTheFavIcons.com favicon_57.png for iPhone -->
-    <link rel="apple-touch-icon" type="image/png" href="/favicons/favicon_57.png" />
+    <link rel="apple-touch-icon" type="image/png" href="favicons/favicon_57.png" />
     <!-- AllTheFavIcons.com favicon_114.png for Retina iPhone -->
-    <link rel="apple-touch-icon" type="image/png" href="/favicons/favicon_114.png" sizes="114x114" />
+    <link rel="apple-touch-icon" type="image/png" href="favicons/favicon_114.png" sizes="114x114" />
     <!-- AllTheFavIcons.com favicon_72.png for iPad -->
-    <link rel="apple-touch-icon" type="image/png" href="/favicons/favicon_72.png" sizes="72x72" />
+    <link rel="apple-touch-icon" type="image/png" href="favicons/favicon_72.png" sizes="72x72" />
     <!-- AllTheFavIcons.com favicon_144.png for Retina iPad -->
-    <link rel="apple-touch-icon" type="image/png" href="/favicons/favicon_144.png" sizes="144x144" />
+    <link rel="apple-touch-icon" type="image/png" href="favicons/favicon_144.png" sizes="144x144" />
     <!-- AllTheFavIcons.com multi resolution favicon.ico for IE -->
-    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="shortcut icon" href="favicon.ico">
 
 
     <title>シャキンあんてな</title> 
@@ -58,9 +58,9 @@
             <li class="line">
                 <ul>
                     <li class="date">{$entry.date|date_format:"%m/%d/%H:%M"}</li>
-                    <li class="articletitle"><a href="{$entry.link}">{$entry.title}</a></li>
+                    <li class="articletitle"><a href="{$entry.link}" target="_blank">{$entry.title}</a></li>
                     <li class="hatena"><img src="http://b.hatena.ne.jp/entry/image/{$entry.link}"></li>
-                    <li class="blogname"><a href="{$entry.blogUrl}">{$entry.blogName}</a></li>
+                    <li class="blogname"><a href="{$entry.blogUrl}" target="_blank">{$entry.blogName}</a></li>
                 </ul>
             </li>
             {/foreach}
