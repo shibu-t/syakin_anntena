@@ -24,6 +24,8 @@ $feeds = array(
     "http://www.negisoku.com/index.rdf",//ネギ速
     "http://michaelsan.livedoor.biz/index.rdf",//もみあげチャーシュー
 );
+
+// rssをぶっこむ  
 foreach ($feeds as $feed) {
     $rss = simplexml_load_file($feed);
     $i = 0;
@@ -39,11 +41,14 @@ foreach ($feeds as $feed) {
     }
 }
 
+// sortするためのキーを作成
 foreach($entries as $key => $val) {
     $date[$key] = $val['date'];
 }
 
+// sort
 array_multisort($date,SORT_STRING,SORT_DESC,$entries);
+
 // echo '<pre>';
 // var_dump($entries);
 // echo '</pre>';
