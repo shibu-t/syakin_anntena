@@ -74,13 +74,13 @@ color:#000;
 	display:inline-block;
 }
 
-#date{
+.date{
 	font color:#555;
 	height:18px;
 	width:113px;
 }
 
-#articletitle{
+.articletitle{
 	width:650px;
 	padding-left:13px;
 	overflow:hidden;
@@ -106,11 +106,11 @@ background-color:#A9A9A9;
 color:#000;
 }
 
-#hatena{
+.hatena{
 	width:55px;
 }
 
-#blogname{
+.blogname{
 	width:200px;
 	overflow:hidden;
 	text-overflow: ellipsis;
@@ -140,39 +140,39 @@ color:#000;
 	#feed ul li ul li{
 		display:block
 	}
-	#line{
+	.line{
 		margin-bottom:1px;
 		border:1px solid #999;
 		-moz-border-radius: 3px;
 		-webkit-border-radius: 3px;
 		border-radius: 3px;
 	}
-	#feed #date{
+	#feed .date{
 		font-size: 12px;
 		padding-left: 13px;
 	}
-	#feed #hatena{
+	#feed .hatena{
 		margin-bottom: -20px;
 		position: relative;
 		left: 227px;
 	}
-	#articletitle{
+	.articletitle{
 		width:90%;/*271px*/
 		padding-left:13px;
 		overflow:visible;
 		white-space:normal
 	}
-	#articletitle a{
+	.articletitle a{
 		font-size:16px;
 		color:#000;
 	}
-	#blogname{
+	.blogname{
 		overflow:visible;
 		white-space:normal;
 		padding-left: 13px;
 		width: 90%;/*271px*/
 	}
-	#blogname a{
+	.blogname a{
 		font-size:10px;
 	}
 }
