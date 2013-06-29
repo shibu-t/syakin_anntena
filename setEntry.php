@@ -1,5 +1,6 @@
 <?php
 $entryNum = 0;
+$maxEntriesDisplay = 200;
 $entries = array();
 $feeds = array(
     "http://underworld2ch.blog29.fc2.com/?xml",//アンダーワールド
@@ -30,7 +31,7 @@ foreach ($feeds as $feed) {
     $rss = simplexml_load_file($feed);
     $i = 0;
     foreach ($rss->item as $item) {
-        if( $i++ == 10 ) { break; }
+        if( $i++ == 20 ) { break; }
         $dc = $item->children('http://purl.org/dc/elements/1.1/');
         $entries[$entryNum]['title'] = (string)$item->title;
         $entries[$entryNum]['link'] = (string)$item->link;
@@ -49,14 +50,14 @@ foreach($entries as $key => $val) {
 // sort
 array_multisort($date,SORT_STRING,SORT_DESC,$entries);
 
-// echo '<pre>';
-// var_dump($entries);
-// echo '</pre>';
+// 表示する記事数をmaxEntriesDisplayに設定
+if ($entryNum > $maxEntriesDisplay) {
+    for ($i = $maxEntriesDisplay;$i < $entryNum;$i++) {
+        unset($entries[$i]);
+    }
+}
 
-    // $link = $item->link;
-    // $title = $item->title;
-    // $date = date('Y.m.d.H.i.s', strtotime($dc->date));
-
+// memcacheにset
 $m = new Memcached();
 $m->addServer('localhost', 11211);
 $m->set('key', $entries, 0);
