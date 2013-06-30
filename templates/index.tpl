@@ -25,9 +25,8 @@
     <meta name="keywords" content="shibu_t,２ｃｈまとめ,アンテナ,ホームページ" />
     <meta name="author" content="shibu_t" />
     <meta name="copyright" content="Copyright &copy;渋谷貴裕" />
-    <script type="text/javascript" src="http://www.google.com/jsapi?key=ABQIAAAAtPFJi_sownlb7nnSF6joTRR8VsB2DMwrgIemibcYry-HBlolORRhhoOmBb3mzSDn5a9LKd48QWFjSg"></script> 
-
-    <script>
+    {literal}
+    <script type="text/javascript">
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -35,10 +34,8 @@
 
       ga('create', 'UA-23129769-11', 'syakin.info');
       ga('send', 'pageview');
-
     </script>
-
-
+    {/literal}
 </head> 
 <body> 
 <div id="wrapper">
