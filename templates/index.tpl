@@ -1,6 +1,3 @@
-
-
-
 <!DOCTYPE html>
 <html lang="ja">
 <head> 
@@ -23,7 +20,7 @@
     <link rel="shortcut icon" href="favicon.ico">
 
 
-    <title>シャキンあんてな</title> 
+    <title>シャキンあんてな-2ちゃんねるまとめのアンテナサイト-</title> 
     <meta name="description" content="2ちゃんねるのアンテナサイト。シンプルでみやすい。" />
     <meta name="keywords" content="shibu_t,２ｃｈまとめ,アンテナ,ホームページ" />
     <meta name="author" content="shibu_t" />
