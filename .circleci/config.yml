@@ -22,7 +22,7 @@ workflows:
     triggers:
       - schedule:
           # NOTE: CircleCIはUTCで動いてるのでJSTにしたければ-9時間した時間を書く
-          cron: "30 9 * * *" # JST 18:30
+          cron: "14 16 * * *" # JST 18:30
           filters:
             branches:
               only: develop
